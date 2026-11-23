@@ -40,12 +40,15 @@ jobs:
       - name: Build debug APK
         run: gradle --no-daemon assembleDebug
 
+      - name: Name APK for download
+        run: cp app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/UltraCam.apk
+
       - name: Publish direct APK download
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: UltraCam latest APK
           body: Latest automatically built UltraCam APK. Download UltraCam.apk below.
-          files: app/build/outputs/apk/debug/app-debug.apk
+          files: app/build/outputs/apk/debug/UltraCam.apk
           overwrite_files: true
           make_latest: true
