@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.ultracam.app'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.ultracam.app'
+        minSdk 21
+        targetSdk 28
+        versionCode 1
+        versionName '1.0'
+    }
+}
